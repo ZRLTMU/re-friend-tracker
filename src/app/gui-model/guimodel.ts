@@ -6,7 +6,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "Dominique's Friend Tracker",
+            "title": "We are your Friends!",
             "formList": [
                 {
                     "id": "FriendForm",
@@ -110,12 +110,21 @@ export class GuiModel {
                     "title": "Activity",
                     "url": "/activity",
                     "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "LocationName",
-                            "width": 2,
-                            "required": true
+                        { 
+                            "id": "location", 
+                            "type": "autocomplete", 
+                            "name": "Location",
+                            "url": "/location", 
+                            "form": "activityForm", 
+                            "width": 2 
+                        },
+                        { 
+                            "id": "friends", 
+                            "type": "autocomplete", 
+                            "name": "Friends",
+                            "url": "/friend", 
+                            "form": "activityForm", 
+                            "width": 2 
                         },
                         {
                             "type": "deleteButton",
@@ -290,7 +299,7 @@ export class GuiModel {
                             "icon": "fa-weixin",
                             "color": "green",
                             "form": {
-                                "form": "AcitivityForm"
+                                "form": "GroupForm"
                             }
                         },
                         {
@@ -301,6 +310,35 @@ export class GuiModel {
                             "url": "/group",
                             "form": {
                                 "form": "GroupForm"
+                            }
+                        },
+
+                    ]
+
+                },
+                {
+                    "id": "activityspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "fa-weixin",
+                            "color": "green",
+                            "form": {
+                                "form": "activityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "green",
+                            "search": true,
+                            "url": "/activity",
+                            "form": {
+                                "form": "activityForm"
                             }
                         },
 
