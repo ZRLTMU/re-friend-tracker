@@ -91,6 +91,14 @@ export class GuiModel {
                             "required": true
                         },
                         {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
                             "type": "deleteButton",
                             "name": "Delete"
                         },
@@ -110,6 +118,20 @@ export class GuiModel {
                     "title": "Activity",
                     "url": "/activity",
                     "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": "Name",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "date",
+                            "type": "date",
+                            "name": "Date",
+                            "width": 2,
+                            "required": true
+                        },
                         { 
                             "id": "location", 
                             "type": "autocomplete", 
@@ -125,6 +147,14 @@ export class GuiModel {
                             "url": "/friend", 
                             "form": "activityForm", 
                             "width": 2 
+                        },
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
                         },
                         {
                             "type": "deleteButton",
@@ -181,6 +211,21 @@ export class GuiModel {
                             "name": "GroupName",
                             "width": 2,
                             "required": true
+                        },
+                        {
+                            "id": "crtDate",
+                            "type": "date",
+                            "name": "CreationDate",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
                         },
                         {
                             "type": "deleteButton",
@@ -297,7 +342,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": "NewGroup",
                             "icon": "fa-weixin",
-                            "color": "green",
+                            "color": "amethyst",
                             "form": {
                                 "form": "GroupForm"
                             }
@@ -305,7 +350,7 @@ export class GuiModel {
                         {
                             "type": "list",
                             "icon": "fa-weixin",
-                            "color": "emerald",
+                            "color": "wisteria",
                             "search": true,
                             "url": "/group",
                             "form": {
